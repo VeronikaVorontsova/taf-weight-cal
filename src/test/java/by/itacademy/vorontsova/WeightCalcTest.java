@@ -1,14 +1,13 @@
 package by.itacademy.vorontsova;
 
-import com.google.common.annotations.VisibleForTesting;
-import junit.framework.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static java.lang.Thread.sleep;
+
 
 public class WeightCalcTest {
     @Test
@@ -24,13 +23,17 @@ public class WeightCalcTest {
 
         // set actual and expected results
         String actual = warningMessageEmptyFields.getText();
-        String expected = "Не указано имя.\n" + "Рост должен быть в диапазоне 50-300 см.\n" + "Вес должен быть в диапазоне 3-500 кг.\n" + "Не указан пол.";
+        String expected = """
+                Не указано имя.
+                Рост должен быть в диапазоне 50-300 см.
+                Вес должен быть в диапазоне 3-500 кг.
+                Не указан пол.""";
 
         //compare actual and expected results
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
         //quit browser
-        sleep(5000);
+        sleep(3000);
         driver.quit();
     }
 }
