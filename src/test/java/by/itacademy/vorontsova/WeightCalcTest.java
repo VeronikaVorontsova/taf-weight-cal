@@ -18,6 +18,7 @@ public class WeightCalcTest {
         // click "Calculate" button
         WebElement calculateButtonWebElement = driver.findElement(By.xpath("//input[@value='Рассчитать']"));
         calculateButtonWebElement.click();
+        
         // get warming message text from WebElement
         WebElement warningMessageEmptyFields = driver.findElement(By.xpath("//tbody/tr[1]/td/b"));
 
