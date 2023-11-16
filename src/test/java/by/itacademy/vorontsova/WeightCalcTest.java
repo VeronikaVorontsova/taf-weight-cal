@@ -14,7 +14,6 @@ public class WeightCalcTest {
         CalcElements calcElements = new CalcElements();
         WebDriver driver = new ChromeDriver();
         driver.get("https://svyatoslav.biz/testlab/wt/index.php");
-
         driver.findElement(By.xpath(calcElements.calculateButtonLocator)).click();
 
         String actual = driver.findElement(By.xpath(calcElements.warningMessageEmptyFieldsLocator)).getText();
@@ -34,9 +33,7 @@ public class WeightCalcTest {
         CalcElements calcElements = new CalcElements();
         WebDriver driver = new ChromeDriver();
         driver.get("https://svyatoslav.biz/testlab/wt/index.php");
-
         driver.findElement(By.xpath(calcElements.nameFieldLocator)).sendKeys("Steve");
-
         driver.findElement(By.xpath(calcElements.calculateButtonLocator)).click();
         Thread.sleep(1000);
 
