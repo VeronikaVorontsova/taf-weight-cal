@@ -1,6 +1,6 @@
 package by.itacademy.vorontsova;
 
-public class CalcElements {
+public class CalcElementsPage {
 
     public String nameFieldLocator = "//input[@name='name']";
     public String heightFieldLocator = "//input[@name='height']";
